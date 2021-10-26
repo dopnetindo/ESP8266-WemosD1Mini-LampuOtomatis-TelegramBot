@@ -1,21 +1,10 @@
-/*
-Name:        lightBot.ino
-Created:     17/01/2018
-Author:      Stefano Ledda <shurillu@tiscalinet.it>
-Description: a simple example that do:
-             1) parse incoming messages
-             2) if "LIGHT ON" message is received, turn on the onboard LED
-             3) if "LIGHT OFF" message is received, turn off the onboard LED
-             4) otherwise, reply to sender with a welcome message
-
-*/
 #include "CTBot.h"
 CTBot myBot;
 
 String ssid  = "dopnetindo"    ; // REPLACE mySSID WITH YOUR WIFI SSID
 String pass  = "B3ngkulu2021"; // REPLACE myPassword YOUR WIFI PASSWORD, IF ANY
 String token = "1337508958:AAGCSu0W7xDZLXDTh1RAZqmzQwJUvW3Hqj0"   ; // REPLACE myToken WITH YOUR TELEGRAM BOT TOKEN
-uint8_t led = D4;            // the onboard ESP8266 LED.    
+int led = D4;            // the onboard ESP8266 LED.    
                             // If you have a NodeMCU you can use the BUILTIN_LED pin
                             // (replace 2 with BUILTIN_LED)							
 
